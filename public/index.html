@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diário do Cosmos — NASA APOD</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Diário do Cosmos</h1>
+    <p class="subtitle">Astronomy Picture of the Day — NASA</p>
+    <div class="controls">
+      <label for="date-picker">Escolha uma data:</label>
+      <input type="date" id="date-picker" min="1995-06-16" />
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="loading" class="status-box hidden" role="status">
+      <div class="spinner"></div>
+      <p>Explorando o cosmos...</p>
+    </div>
+
+    <div id="error" class="status-box error-box hidden" role="alert">
+      <p id="error-message">Não foi possível carregar o registro astronômico.</p>
+    </div>
+
+    <article id="apod-card" class="card hidden">
+      <header class="card-header">
+        <h2 id="apod-title"></h2>
+        <time id="apod-date" class="date-badge"></time>
+      </header>
+
+      <div id="media-container" class="media-container"></div>
+
+      <p id="apod-copyright" class="copyright hidden"></p>
+      <p id="apod-explanation" class="explanation"></p>
+    </article>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
