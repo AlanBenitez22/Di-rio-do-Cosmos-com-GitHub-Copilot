@@ -39,13 +39,24 @@ app.get('/api/apod', async (req, res) => {
       });
     }
 
+    const apodEntries = Array.isArray(data) ? data : [data];
+    const apod = date
+      ? apodEntries.find((entry) => entry.date === date)
+      : apodEntries[0];
+
+    if (!apod) {
+      return res.status(404).json({
+        error: 'A API da NASA não retornou conteúdo para a data selecionada.'
+      });
+    }
+
     return res.json({
-      title: data.title,
-      date: data.date,
-      media_type: data.media_type,
-      url: data.media_type === 'image' ? data.hdurl || data.url : data.url,
-      explanation: data.explanation,
-      copyright: data.copyright || null
+      title: apod.title,
+      date: apod.date,
+      media_type: apod.media_type,
+      url: apod.media_type === 'image' ? apod.hdurl || apod.url : apod.url,
+      explanation: apod.explanation,
+      copyright: apod.copyright || null
     });
   } catch (error) {
     console.error('Erro na requisição APOD:', error);
