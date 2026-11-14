@@ -1,1 +1,1 @@
-# Di-rio-do-Cosmos-com-GitHub-Copilot
+# Dia-rio-do-Cosmos-com-GitHub-Copilot
