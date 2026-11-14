@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Diário do Cosmos com GitHub Copilot
 
 # Instruções do Projeto: Diário do Cosmos (NASA APOD)
@@ -34,3 +35,6 @@ O projeto segue o padrão **Backend-for-Frontend (BFF) / Proxy** para proteger c
 - **Isolamento do Cliente:** O frontend (`public/app.js`) está proibido de fazer requisições diretas para `api.nasa.gov`. Toda comunicação externa ocorre via `server.js`.
 - **Validação de Entrada:** O backend deve validar via Regex (`/^\d{4}-\d{2}-\d{2}$/`) se o parâmetro `date` recebido na query string é válido antes de repassá-lo à API da NASA, rejeitando entradas malformadas com status `400`.
 - **Sanitização no DOM:** Utilize `textContent` (nunca `innerHTML`) para inserir `title`, `date` e `explanation` vindos da API, prevenindo ataques XSS.
+=======
+# Dia-rio-do-Cosmos-com-GitHub-Copilot
+>>>>>>> 7fed8a5163bb47494a155380bc311d4a40b0adc5
