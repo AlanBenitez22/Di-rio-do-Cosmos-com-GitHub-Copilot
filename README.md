@@ -1,0 +1,1 @@
+# Di-rio-do-Cosmos-com-GitHub-Copilot
